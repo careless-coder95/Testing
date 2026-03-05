@@ -298,15 +298,20 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         InlineKeyboardButton("📜 ˹sєᴧʀᴄʜ ʜɪsᴛσʀʏ˼", callback_data="history")
     ],
     [
-        InlineKeyboardButton("💬 ˹sᴜᴘᴘσʀᴛ ɢʀσᴜᴘ˼", url="https://t.me/II_StarkxRich_II"),
-        InlineKeyboardButton("📢 ˹σғғɪᴄɪᴧʟ ᴄʜᴧηηєʟ˼", url="https://t.me/ll_CarelessxCoder_ll")
+        InlineKeyboardButton("💬 ˹sᴜᴘᴘσʀᴛ ɢʀσᴜᴘ˼", url="https://t.me/+tnYU-nYOsRFlNmRl"),
+        InlineKeyboardButton("📢 ˹σғғɪᴄɪᴧʟ ᴄʜᴧηηєʟ˼", url="https://t.me/About_Spector")
     ],
     [
-        InlineKeyboardButton("🚀 ˹ᴜᴘᴅᴧᴛє ᴄʜᴧηηєʟ˼", url="https://t.me/ROLEX_MODS_45")
+        InlineKeyboardButton("🚀 ˹ᴜᴘᴅᴧᴛє ᴄʜᴧηηєʟ˼", url="https://t.me/+tnYU-nYOsRFlNmRl")
     ]
         ]
-        await update.message.reply_text(panel("🔐 Premium Access", content), parse_mode="HTML", 
-                                         reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True)
+        await update.message.reply_photo(
+        photo="https://files.catbox.moe/fg7uzi.jpg",
+        caption=panel("🔐 Premium Access", content),
+        parse_mode="HTML",
+        reply_markup=InlineKeyboardMarkup(keyboard),
+        has_spoiler=True
+        )
     else:
         content = f"""⚠️ <b>You are not authorized!</b>
 
@@ -324,8 +329,13 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         InlineKeyboardButton("🚀 ˹ᴜᴘᴅᴧᴛє ᴄʜᴧηηєʟ˼", url="https://t.me/+tnYU-nYOsRFlNmRl")
     ]
         ]
-        await update.message.reply_text(panel("🚫 Access Denied", content), parse_mode="HTML",
-                                         reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True)
+        await update.message.reply_photo(
+        photo="https://files.catbox.moe/fg7uzi.jpg",
+        caption=panel("🚫 Access Denied", content),
+        parse_mode="HTML",
+        reply_markup=InlineKeyboardMarkup(keyboard),
+        has_spoiler=True
+        )
 
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
